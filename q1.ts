@@ -12,34 +12,29 @@ interface Shop {
 }
 
 // assign interface/type to the function definition properly
-function buyItem(hero : Hero, shop : Shop) {
+function buyItem(hero : Hero, shop : Shop)  {
   /* Your code here */
-  if (hero.gold >= shop.price) {
-    hero.items.push(shop.items);
-    hero.gold -= shop.price;
-    return hero;
-  } else {
-    return hero;
-  }
+  (hero.gold >= shop.price)? (hero.items.push(shop.items)) && (hero.gold -= shop.price) : hero;
+  return hero;
 }
 
 //Test cases : assign proper type/interface to all objects
-const hero1 : Hero = {
+const hero1 = {
   items: ["sword", "potion"],
   gold: 50,
 };
 
-const shop1 : Shop = {
+const shop1 = {
   items: "armor",
   price: 20,
 };
 
-const hero2 : Hero = {
+const hero2 = {
   items: ["sword", "potion"],
   gold: 50,
 };
 
-const shop2 : Shop = {
+const shop2 = {
   items: "legendary armor",
   price: 200,
 };
