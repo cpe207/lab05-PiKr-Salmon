@@ -4,19 +4,19 @@
 interface Hero {
   items : string[];
   gold : number;
-}
+};
 
 interface Shop {
-  items : string;
+  item : string;
   price : number;
-}
+};
 
 // assign interface/type to the function definition properly
 function buyItem(hero : Hero, shop : Shop) {
   /* Your code here */
   if (hero.gold >= shop.price) {
     hero.gold -= shop.price;
-    hero.items.push(shop.items);
+    hero.items.push(shop.item);
     return hero;
   } 
   return hero;
@@ -29,7 +29,7 @@ const hero1 = {
 };
 
 const shop1 = {
-  items: "armor",
+  item: "armor",
   price: 20,
 };
 
@@ -39,7 +39,7 @@ const hero2 = {
 };
 
 const shop2 = {
-  items: "legendary armor",
+  item: "legendary armor",
   price: 200,
 };
 

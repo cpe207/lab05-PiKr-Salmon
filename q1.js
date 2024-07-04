@@ -1,10 +1,12 @@
 //660612152 ปิยวัฒน์ เครือประเสริฐ
+;
+;
 // assign interface/type to the function definition properly
 function buyItem(hero, shop) {
     /* Your code here */
     if (hero.gold >= shop.price) {
         hero.gold -= shop.price;
-        hero.items.push(shop.items);
+        hero.items.push(shop.item);
         return hero;
     }
     return hero;
@@ -16,7 +18,7 @@ var hero1 = {
     gold: 50,
 };
 var shop1 = {
-    items: "armor",
+    item: "armor",
     price: 20,
 };
 var hero2 = {
@@ -24,7 +26,7 @@ var hero2 = {
     gold: 50,
 };
 var shop2 = {
-    items: "legendary armor",
+    item: "legendary armor",
     price: 200,
 };
 console.log(buyItem(hero1, shop1));
