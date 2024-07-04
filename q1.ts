@@ -1,35 +1,41 @@
+//660612152 ปิยวัฒน์ เครือประเสริฐ
+
 // define interface for Hero and Shop objects
 interface Hero {
-  /* Your code here */
+  items : string[];
+  gold : number;
 }
 
 interface Shop {
-  /* Your code here */
+  items : string;
+  price : number;
 }
 
 // assign interface/type to the function definition properly
-function buyItem(hero, shop) {
+function buyItem(hero : Hero, shop : Shop){
   /* Your code here */
+  (hero.gold >= shop.price)? (hero.items.push(shop.items) && hero.gold - shop.price) : hero;
+  return hero;
 }
 
 //Test cases : assign proper type/interface to all objects
-const hero1 = {
+const hero1 : Hero = {
   items: ["sword", "potion"],
   gold: 50,
 };
 
-const shop1 = {
-  item: "armor",
+const shop1 : Shop = {
+  items: "armor",
   price: 20,
 };
 
-const hero2 = {
+const hero2 : Hero = {
   items: ["sword", "potion"],
   gold: 50,
 };
 
-const shop2 = {
-  item: "legendary armor",
+const shop2 : Shop = {
+  items: "legendary armor",
   price: 200,
 };
 
@@ -37,3 +43,4 @@ console.log(buyItem(hero1, shop1));
 console.log(buyItem(hero2, shop2));
 
 module.exports = buyItem;
+
