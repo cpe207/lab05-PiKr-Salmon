@@ -20,7 +20,7 @@ function buyItem(hero : Hero, shop : Shop) {
     return hero;
   } 
   return hero;
-}
+};
 
 //Test cases : assign proper type/interface to all objects
 const hero1 = {

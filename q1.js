@@ -9,6 +9,7 @@ function buyItem(hero, shop) {
     }
     return hero;
 }
+;
 //Test cases : assign proper type/interface to all objects
 var hero1 = {
     items: ["sword", "potion"],
