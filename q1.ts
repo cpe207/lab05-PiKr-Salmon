@@ -15,8 +15,8 @@ interface Shop {
 function buyItem(hero : Hero, shop : Shop) {
   /* Your code here */
   if (hero.gold >= shop.price) {
-    hero.items.push(shop.items);
     hero.gold -= shop.price;
+    hero.items.push(shop.items);
     return hero;
   } 
   return hero;
