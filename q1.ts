@@ -12,11 +12,12 @@ interface Shop {
 }
 
 // assign interface/type to the function definition properly
-function buyItem(hero : Hero, shop : Shop)  {
+function buyItem(hero : Hero, shop : Shop) : Hero | string[] | number  {
   /* Your code here */
   if (hero.gold >= shop.price) {
     hero.items.push(shop.items);
     hero.gold -= shop.price;
+    return hero;
   } 
   return hero;
 }
